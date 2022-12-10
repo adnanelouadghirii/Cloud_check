@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cloud Integration Project CheckPoint</title>
+	<style>
+		#map {
+			height: 100%;
+		}
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+	<script>
+	function initMap() {
+		var mapOptions = {
+			zoom: 8,
+			center: new google.maps.LatLng(34.0181246, -5.0078451),
+			mapTypeId: 'satellite'
+		};
+	var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(34.0181246, -5.0078451),
+    title:"Hello World!"
+	});
+	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+	marker.setMap(map);
+
+}
+</script>
+</head>
+<body>
+<div id="map"></div>
+<script async defer
+		src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initMap">
+</script>
+</body>
+</html>
